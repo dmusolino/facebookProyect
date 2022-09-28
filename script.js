@@ -3,7 +3,19 @@ var database = [
 {
     username: "Damian",
     password: "topsecret"
-}
+},
+{
+    username: "Jorge",
+    password: "topsecret1"
+},
+{
+    username: "Roberto",
+    password: "topsecret2"
+},
+{
+    username: "Nathan",
+    password: "topsecret3"
+},
 
 ];
 
