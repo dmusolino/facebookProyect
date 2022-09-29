@@ -34,26 +34,41 @@ var newsfeed = [
 }
 ];
 
-var userPrompt = prompt("What is your Username")
-var passPrompt = prompt("What is your Password")
+var userPrompt = prompt("What is your Username");
+var passPrompt = prompt("What is your Password");
 
 
+function isValidUser(user,pass) 
 
-function singIn(user,pass){
-
-if (user === database[0].username &&
-    pass === database[0].password) {
-
-    console.log(newsfeed);
-
-} else { 
+{ for (var i = 0; i < database.length; i++){
     
-    alert("Wrong Username or Password")
+    if (database[i].username === user &&
+        database[i].password === pass)
+        
+        {
+
+            return true;
+        }
+
+          
+    
+    }
+
+    return false;
+}
+
+
+function signIn(user,pass)
+{
+
+  if (isValidUser(user,pass)) {
+
+     console.log(newsfeed)
+
+ } else {alert("Sorry, wrong username or password")}
+
 
 }
 
-}
 
-singIn(userPrompt,passPrompt)
-
-
+signIn(userPrompt,passPrompt);
